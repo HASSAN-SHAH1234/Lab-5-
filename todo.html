@@ -1,0 +1,51 @@
+<!-- Hassan Bukhari | Registration No: 240523 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container todo-page">
+        <div class="page-header">
+            <div>
+                <p class="eyebrow">LAB 05 • PART B</p>
+                <h1>Interactive To-Do List</h1>
+                <p>Manage tasks with vanilla JavaScript, filters and event delegation.</p>
+            </div>
+            <a class="nav-link" href="index.html">← Registration Card</a>
+        </div>
+
+        <section class="todo-app panel">
+            <form id="todoForm" class="todo-form">
+                <label class="sr-only" for="taskInput">New task</label>
+                <input id="taskInput" type="text" placeholder="What needs to be done?" autocomplete="off">
+                <button type="submit" class="primary-btn">Add Task</button>
+            </form>
+            <p id="todoError" class="error todo-error"></p>
+
+            <div class="todo-toolbar">
+                <div id="taskCounter" class="counter">0 tasks • 0 remaining</div>
+                <div class="filters" role="group" aria-label="Task filters">
+                    <button type="button" class="filter-btn active" data-filter="all">All</button>
+                    <button type="button" class="filter-btn" data-filter="active">Active</button>
+                    <button type="button" class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                <button type="button" id="clearCompleted" class="secondary-btn">Clear completed</button>
+            </div>
+
+            <ul id="taskList" class="task-list" aria-live="polite"></ul>
+            <p id="emptyTasks" class="empty-state">No tasks yet. Add your first task above.</p>
+        </section>
+
+        <section class="tips panel">
+            <h2>Controls</h2>
+            <p>Double-click a task to edit it. Press <kbd>Enter</kbd> to save or <kbd>Escape</kbd> to cancel.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

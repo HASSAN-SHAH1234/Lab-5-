@@ -1,0 +1,86 @@
+<!-- Hassan Bukhari | Registration No: 240523 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Student Registration Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <div class="page-header">
+            <div>
+                <p class="eyebrow">LAB 05</p>
+                <h1>Student Registration</h1>
+                <p>Register a student and watch the preview update live.</p>
+            </div>
+            <a class="nav-link" href="todo.html">Open To-Do List →</a>
+        </div>
+
+        <section class="registration-layout">
+            <form id="studentForm" class="panel" novalidate>
+                <h2>Registration Form</h2>
+
+                <div class="field">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="e.g. Hassan Bukhari">
+                    <small id="nameError" class="error"></small>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="e.g. hassan@example.com">
+                    <small id="emailError" class="error"></small>
+                </div>
+
+                <div class="field">
+                    <label for="program">Program</label>
+                    <select id="program">
+                        <option value="">Select Program</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Information Technology">Information Technology</option>
+                        <option value="Artificial Intelligence">Artificial Intelligence</option>
+                        <option value="Data Science">Data Science</option>
+                    </select>
+                    <small id="programError" class="error"></small>
+                </div>
+
+                <div class="field">
+                    <label for="semester">Semester</label>
+                    <input type="number" id="semester" min="1" max="12" placeholder="1 - 12">
+                    <small id="semesterError" class="error"></small>
+                </div>
+
+                <button type="submit" class="primary-btn">Register Student</button>
+            </form>
+
+            <section id="previewCard" class="preview-card">
+                <button type="button" id="themeToggle" class="theme-btn">Toggle Dark Mode</button>
+                <p class="eyebrow">LIVE PREVIEW</p>
+                <h2 id="previewName">Your Name</h2>
+                <p id="previewEmail">your@email.com</p>
+                <div class="preview-details">
+                    <div><span>Program</span><strong id="previewProgram">Not selected</strong></div>
+                    <div><span>Semester</span><strong id="previewSemester">-</strong></div>
+                </div>
+            </section>
+        </section>
+
+        <section class="panel registered-panel">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">SUBMISSIONS</p>
+                    <h2>Registered Students</h2>
+                </div>
+                <span id="studentCount" class="count-badge">0</span>
+            </div>
+            <ul id="registeredStudents" class="student-list"></ul>
+            <p id="emptyStudents" class="empty-state">No students registered yet.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
